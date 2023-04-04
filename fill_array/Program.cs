@@ -7,11 +7,11 @@
             int row = 0;
             int col = 0;
 
-            FillArray(ref row, ref col);
-            GetNumber(row, col);
+            GetNumber(ref row, ref col);
+            FillArray(row, col);
         }
 
-        public static void FillArray(ref int row, ref int col)
+        public static void GetNumber(ref int row, ref int col)
         {
             Console.Write("Enter row value=> ");
             row = int.Parse(Console.ReadLine());
@@ -19,7 +19,7 @@
             Console.Write("Enter column value=> ");
             col = int.Parse(Console.ReadLine());
         }
-        public static void GetNumber(int row, int column)
+        public static void FillArray(int row, int column)
         {
             Random random = new Random();
             int[,] array = new int[row, column];
